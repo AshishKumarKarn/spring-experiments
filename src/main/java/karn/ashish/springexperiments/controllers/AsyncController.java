@@ -46,17 +46,4 @@ public class AsyncController {
 
 
 
-    @Async
-    public Future<String> asyncMethodWithReturnType() {
-        System.out.println("Execute method asynchronously - "
-                + Thread.currentThread().getName());
-        try {
-            Thread.sleep(5000);
-            return new AsyncResult<String>("hello world !!!!");
-        } catch (InterruptedException e) {
-            //
-        }
-
-        return null;
-    }
 }
